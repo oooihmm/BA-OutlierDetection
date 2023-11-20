@@ -1,7 +1,13 @@
 <template>
   <div class="container">
     <Navigation />
-     <button class="start-button" @click="startAnalysis" :disabled="!audioFile">Start</button>
+    <!-- 음성 파일 업로드 인터페이스 -->
+    <div class="file-upload-container">
+      <input type="file" @change="handleAudioUpload" accept=".wav,.mp3,.mp4" />
+    </div>
+    <div class="button-container">
+      <button class="start-button" @click="startAnalysis" :disabled="!audioFile">Start</button>
+    </div>
   </div>
 </template>
 
@@ -13,29 +19,57 @@ export default {
   components: {
     Navigation,
   },
+  data() {
+    return {
+      audioFile: null, // 음성 파일 데이터
+    };
+  },
+  methods: {
+    handleAudioUpload(event) {
+      // 사용자가 파일을 선택하면 이 함수가 호출됩니다.
+      const files = event.target.files;
+      if (files.length > 0) {
+        this.audioFile = files[0]; // 첫 번째 파일을 audioFile에 저장
+      }
+    },
+    startAnalysis() {
+      // 분석 시작 로직
+      // ...
+    }
+  },
 };
 </script>
 
 <style scoped>
+/* 스타일은 이전과 같으며, 필요에 따라 파일 업로드 인터페이스 스타일을 추가할 수 있습니다. */
 .container {
-  display: flex; /* Flexbox 레이아웃 사용 */
-  flex-direction: column; /* 자식 요소를 세로 방향으로 정렬 */
-  justify-content: space-between; /* 자식 요소 사이의 공간을 균등하게 배분 */
-  height: 100vh; /* 전체 뷰포트 높이 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.file-upload-container {
+  text-align: center; /* 파일 업로드 인터페이스를 가운데 정렬 */
+  margin: auto; /* 자동 마진으로 상하좌우 중앙 정렬 */
+}
+
+.button-container {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .start-button {
-  background-color: navy; /* 남색 배경 */
-  color: white; /* 흰색 텍스트 */
-  padding: 20px 60px; /* 버튼 안쪽 여백 */
-  font-size: 16px; /* 글자 크기 */
-  border: none; /* 테두리 없앰 */
-  border-radius: 3px; /* 버튼 모서리 둥글게 */
-  cursor: pointer; /* 마우스 오버시 커서 변경 */
+  background-color: navy;
+  color: white;
+  padding: 20px 100px;
+  font-size: 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .start-button:disabled {
-  background-color: navy; /* 비활성화 상태에서 배경 색 */
+  background-color: navy;
 }
 </style>
-
