@@ -56,8 +56,7 @@ export default {
       }
     },
     startAnalysis() {
-      // 분석 시작 로직
-      // ...
+      this.$router.push('/loading')
     }
   },
 };
