@@ -3,7 +3,7 @@
     <Navigation />
     <div class="file-upload-container">
       <!-- SVG를 file-upload-container 내부에 추가합니다. -->
-      <svg width="72" height="23" viewBox="0 0 72 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="288" height="92" viewBox="0 0 72 23" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="72" height="23" rx="2" fill="#000583" fill-opacity="0.1"/>
         <g opacity="0.6">
           <path opacity="0.8" d="M29 8V14" stroke="black" stroke-width="3" stroke-linecap="round"/>\
@@ -80,7 +80,7 @@ export default {
   border-radius: 10px; /* 테두리 모서리 둥글게 */
   cursor: pointer; /* 마우스 오버시 커서 변경 */
   width: 1000px; /* 가로 길이 */
-  height: 300px; /* 세로 길이 */
+  height: 350px; /* 세로 길이 */
   box-sizing: border-box; /* border와 padding을 너비와 높이에 포함 */
   position: relative; /* 자식 요소들을 상대적으로 위치시킵니다. */
   display: flex;
@@ -94,22 +94,22 @@ export default {
 
 .file-input {
   /* 파일 입력 필드 위에 여백을 줄입니다. 기존의 margin-top 값을 적절하게 조정합니다. */
-  margin-top: 70px; /* 감소된 마진 */
-  margin-bottom: 30px; /* 음수 마진을 적용하여 아래 요소를 위로 당깁니다. */
+  margin-top: 10px;
+  margin-bottom: 10px; 
 }
 
 .file-upload-instructions {
   margin-top: 0; /* 마진을 제거하거나 조정하여 텍스트들이 붙어 보이게 합니다. */
   color: #000000;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 0; /* file-upload-instructions와 file-types 사이의 마진을 제거 */
 }
 
 .file-types {
-  margin-top: 5px; /* 약간의 공간을 제공합니다. */
-  color: #555;
-  font-size: 16px;
+  margin-top: 0px; /* 약간의 공간을 제공합니다. */
+  color: #E0E0E0;
+  font-size: 20px;
 }
 
 
