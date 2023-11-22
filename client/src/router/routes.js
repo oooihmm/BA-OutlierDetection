@@ -1,5 +1,6 @@
 import Main from "@/views/MainPage.vue";
 import Detection from "@/views/DetectionPage.vue";
+import Loading from "@/views/LoadingPage.vue";
 import Statistic from "@/views/StatisticPage.vue";
 
 const routes = [
@@ -12,6 +13,11 @@ const routes = [
     path: "/detection",
     name: "detection",
     component: Detection,
+  },
+  {
+    path: "/loading",
+    name: "loading",
+    component: Loading,
   },
   {
     path: "/statistics",
