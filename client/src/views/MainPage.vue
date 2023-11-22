@@ -1,9 +1,30 @@
 <template>
   <div class="container">
     <Navigation />
-    <!-- 음성 파일 업로드 인터페이스 -->
     <div class="file-upload-container">
-      <input type="file" @change="handleAudioUpload" accept=".wav,.mp3,.mp4" />
+      <!-- SVG를 file-upload-container 내부에 추가합니다. -->
+      <svg width="72" height="23" viewBox="0 0 72 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="72" height="23" rx="2" fill="#000583" fill-opacity="0.1"/>
+        <g opacity="0.6">
+          <path opacity="0.8" d="M29 8V14" stroke="black" stroke-width="3" stroke-linecap="round"/>\
+          <path opacity="0.8" d="M24 6L24 17" stroke="black" stroke-width="3" stroke-linecap="round"/>
+          <path opacity="0.8" d="M19 3V19" stroke="black" stroke-width="3" stroke-linecap="round"/>
+          <path opacity="0.8" d="M14 4V18" stroke="black" stroke-width="3" stroke-linecap="round"/>
+          <path opacity="0.8" d="M49 3V20" stroke="black" stroke-width="3" stroke-linecap="round"/>
+          <path opacity="0.8" d="M44 6V16" stroke="black" stroke-width="3" stroke-linecap="round"/>
+          <path opacity="0.8" d="M39 4V18" stroke="black" stroke-width="3" stroke-linecap="round"/>
+          <path opacity="0.8" d="M64 3V20" stroke="black" stroke-width="3" stroke-linecap="round"/>
+          <path opacity="0.8" d="M59 5V16.5" stroke="black" stroke-width="3" stroke-linecap="round"/>
+          <path opacity="0.8" d="M54 8V14" stroke="black" stroke-width="3" stroke-linecap="round"/>
+          <path opacity="0.8" d="M69 8V14" stroke="black" stroke-width="3" stroke-linecap="round"/>
+          <path opacity="0.8" d="M34 6V17" stroke="black" stroke-width="3" stroke-linecap="round"/>
+          <path opacity="0.8" d="M9 7V16" stroke="black" stroke-width="3" stroke-linecap="round"/>
+          <path opacity="0.8" d="M4 10L4 14" stroke="black" stroke-width="3" stroke-linecap="round"/>
+        </g>   
+      </svg>
+      <!-- File input -->
+      <input type="file" @change="handleAudioUpload" accept=".wav,.mp3,.mp4" class="file-input" />
+      <!-- Instructions and file types text -->
       <p class="file-upload-instructions">오디오 파일을 업로드 하시오.</p>
       <p class="file-types">(.wav, .mp3, .mp4 등)</p>
     </div>
@@ -62,18 +83,35 @@ export default {
   height: 300px; /* 세로 길이 */
   box-sizing: border-box; /* border와 padding을 너비와 높이에 포함 */
   position: relative; /* 자식 요소들을 상대적으로 위치시킵니다. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Adjust the padding and margin as needed */
+  padding: 20px;
+  gap: 10px; /* This creates space between the flex items */
 }
 
 .file-input {
-  margin-top: 100px; /* 파일 입력 필드 위에 여백 추가 */
+  /* 파일 입력 필드 위에 여백을 줄입니다. 기존의 margin-top 값을 적절하게 조정합니다. */
+  margin-top: 70px; /* 감소된 마진 */
+  margin-bottom: 30px; /* 음수 마진을 적용하여 아래 요소를 위로 당깁니다. */
 }
 
-.file-upload-instructions,
-.file-types {
-  margin-top: 50px; /* 텍스트 위에 여백 추가 */
-  color: #555; /* 텍스트 색상 설정 */
-  font-size: 18px; /* 텍스트 크기 설정 */
+.file-upload-instructions {
+  margin-top: 0; /* 마진을 제거하거나 조정하여 텍스트들이 붙어 보이게 합니다. */
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0; /* file-upload-instructions와 file-types 사이의 마진을 제거 */
 }
+
+.file-types {
+  margin-top: 5px; /* 약간의 공간을 제공합니다. */
+  color: #555;
+  font-size: 16px;
+}
+
 
 .button-container {
   text-align: center;
