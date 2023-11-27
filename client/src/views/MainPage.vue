@@ -23,7 +23,7 @@
         </g>   
       </svg>
       <!-- File input -->
-      <input type="file" @change="handleAudioUpload" accept=".wav,.mp3,.mp4" class="file-input" />
+        <input type="file" @change="handleAudioUpload" accept=".wav,.mp3,.mp4" class="file-input" />
       <!-- Instructions and file types text -->
       <p class="file-upload-instructions">오디오 파일을 업로드 하시오.</p>
       <p class="file-types">(.wav, .mp3, .mp4 등)</p>
@@ -79,7 +79,7 @@ export default {
   border-radius: 10px; /* 테두리 모서리 둥글게 */
   cursor: pointer; /* 마우스 오버시 커서 변경 */
   width: 1000px; /* 가로 길이 */
-  height: 350px; /* 세로 길이 */
+  height: 380px; /* 세로 길이 */
   box-sizing: border-box; /* border와 padding을 너비와 높이에 포함 */
   position: relative; /* 자식 요소들을 상대적으로 위치시킵니다. */
   display: flex;
@@ -115,6 +115,7 @@ export default {
 .button-container {
   text-align: center;
   margin-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 .start-button {
@@ -130,4 +131,9 @@ export default {
 .start-button:disabled {
   background-color: navy;
 }
+
+.start-button:hover {
+  background: rgba(0, 0, 128, 0.859);
+}
+
 </style>
