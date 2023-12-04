@@ -101,7 +101,7 @@ export default {
   margin-top: 0; /* 마진을 제거하거나 조정하여 텍스트들이 붙어 보이게 합니다. */
   color: #000000;
   font-size: 24px;
-  font-weight: bold;
+  /*font-weight: bold;*/
   margin-bottom: 0; /* file-upload-instructions와 file-types 사이의 마진을 제거 */
 }
 

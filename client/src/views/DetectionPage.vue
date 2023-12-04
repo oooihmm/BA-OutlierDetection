@@ -1,10 +1,11 @@
 <template>
   <div>
-      <Navigation />
-      <div class="center">
-          <div class="loading_image_text">분석 완료!</div>
-          <div class="eng_text">Outlier Detection</div>
-      </div>
+    <Navigation />
+    <div class="center">
+      <div class="loading_image_text">분석 완료!</div>
+      <img :src="require('@/assets/Light.png')" alt="Light" class="background-image">
+      <div class="eng_text">Outlier Detection</div>
+    </div>
   </div>
 </template>
 
@@ -19,17 +20,15 @@ export default {
 };
 </script>
 
-
 <style>
-.center{
+.center {
   position: relative;
   text-align: center;
   font-family: Arial, sans-serif;
   padding-top: 550px;
 }
 
-
-.loading_image_text{
+.loading_image_text {
   font-size: 45px; 
   color: black; 
   font-family: Arial, sans-serif;
@@ -41,7 +40,19 @@ export default {
   z-index: 2;
 }
 
-.eng_text{
+.background-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: auto;
+  transform: translate(-50%, -50%);
+  filter: saturate(50%) scale(0.33); /* 채도 50%로 설정 */
+  z-index: 1; /* 텍스트 뒤에 배치 */
+  opacity: 0.2;
+}
+
+.eng_text {
   font-size: 30px;
   color: #d5d5d5;
   position: absolute;
