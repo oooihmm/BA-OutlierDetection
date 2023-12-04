@@ -46,45 +46,46 @@ export default {
 }
 
 .result-text {
-  font-size: 70px; /* Increased font size */
-  margin-right: 30px; /* Spacing between text and box */
-  font-style: italic;
-  font-weight: bold;
+  font-size: 40px;
+  margin-right: 30px;
   position: relative;
   z-index: 2;
 }
 
 .result-box {
-  display: inline-block;
-  padding: 15px 20px; /* Adjusted padding for larger box */
-  font-size: 70px; /* Font size for the text in the box */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  padding: 15px 20px;
+  font-size: 24px;
   color: white;
-  border-radius: 25px;
-  font-weight: bold;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6); /* Drop shadow for the box */
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  font-weight: bold; /* For bold text */
 }
 
 .outlier {
-  background-color: #000583; /* Dark blue color */
+  background-color: #000583;
 }
 
 .normal {
-  background-color: #000583; /* Example color, change as needed */
+  background-color: #000583;
 }
 
 .magnifying-glass {
-  position: absolute; /* 절대 위치 설정 */
-  top: 50%; /* 중앙 정렬을 위한 설정 */
+  position: absolute;
+  top: 50%;
   left: 25%;
-  transform: translate(-50%, -50%); /* 중앙 정렬을 위한 설정 */
-  width: 140px; /* 원하는 크기로 조정 */
-  height: auto; /* 비율 유지 */
-  z-index: 1; /* 텍스트 뒤로 */
+  transform: translate(-50%, -50%);
+  width: 130px;
+  height: auto;
+  z-index: 1;
   opacity: 0.2;
   filter: grayscale(100%);
 }
-
 </style>
+
 
 
 
