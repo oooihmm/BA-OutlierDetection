@@ -2,6 +2,7 @@ import Main from "@/views/MainPage.vue";
 import Detection from "@/views/DetectionPage.vue";
 import Loading from "@/views/LoadingPage.vue";
 import Statistic from "@/views/StatisticPage.vue";
+import Dashboard from "@/views/DashboardPage.vue";
 
 const routes = [
   {
@@ -23,6 +24,11 @@ const routes = [
     path: "/statistics",
     name: "statistics",
     component: Statistic,
+  },
+  {
+    path: "/dashboard",
+    name: "dashboard",
+    component: Dashboard,
   },
 ];
 

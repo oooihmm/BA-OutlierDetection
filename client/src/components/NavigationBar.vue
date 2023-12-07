@@ -28,10 +28,10 @@
         <img
           class="image"
           src="../assets/Statistics.png"
-          alt="Statistics"
+          alt="Dashboard"
           @click="
             () => {
-              this.$router.push('/statistics');
+              this.$router.push('/dashboard');
             }
           "
         />
