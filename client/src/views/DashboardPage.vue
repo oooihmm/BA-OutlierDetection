@@ -2,7 +2,7 @@
 <template>
   <div>
     <Navigation />
-    <div class="container">
+    <div id="dashboard-container">
       <div class="tableauPlaceholder" :id="vizId" style="position: relative">
         <noscript>
           <a :href="tableauLink" target="_blank">
@@ -75,7 +75,7 @@ export default {
 </script>
 
 <style>
-.container {
+#dashboard-container {
   display: flex;
   flex-direction: column;
   padding-top: 60px;
